@@ -62,7 +62,7 @@ const Header = () => {
           onMouseLeave={() => setShowExperience(false)}
           className="relative cursor-pointer"
         >
-          <span className="relative group flex items-center space-x-1 text-[#bdbcbc] hover:text-[#c87c38]">
+          <span className="relative group flex items-center space-x-1 text-[16px] text-[#000000] hover:text-[#c87c38]">
             <span>Experiences</span>
 
             {/* ⬇️ Arrow with hover-rotate */}
@@ -117,7 +117,7 @@ const Header = () => {
           onMouseLeave={() => setShowPortfolio(false)}
           className="relative cursor-pointer"
         >
-          <span className="relative group flex items-center space-x-1 text-[#bdbcbc] hover:text-[#c87c38]">
+          <span className="relative group flex items-center space-x-1 text-[16px] text-[#000000] hover:text-[#c87c38]">
             <Link to="/portfolio"> <span>Gallery</span> </Link>
 
             {/* Underline */}
@@ -131,7 +131,7 @@ const Header = () => {
           onMouseLeave={() => setShowPortfolio(false)}
           className="relative cursor-pointer"
         >
-          <span className="relative group flex items-center space-x-1 text-[#bdbcbc] hover:text-[#c87c38]">
+          <span className="relative group flex items-center space-x-1 text-[16px] text-[#000000] hover:text-[#c87c38]">
             <Link to="/Service"> <span>Services</span> </Link>
 
             {/* Underline */}
@@ -142,7 +142,7 @@ const Header = () => {
 
         <Link to="/about"
           href="#"
-          className="relative group text-[#bdbcbc] hover:text-[#c87c38]"
+          className="relative group text-[16px] text-[#000000] hover:text-[#c87c38]"
         >
           About
           <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-gradient-to-r from-[#C87C38] to-[#a07e7e] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
@@ -150,7 +150,7 @@ const Header = () => {
 
         <Link to="/testimonials"
           href="#"
-          className="relative group text-[#bdbcbc] hover:text-[#c87c38]"
+          className="relative group text-[16px] text-[#000000] hover:text-[#c87c38]"
         >
           Testimonials
           <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-gradient-to-r from-[#C87C38] to-[#a07e7e] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>
@@ -158,7 +158,7 @@ const Header = () => {
 
         <Link to="/contact"
           href="#"
-          className="relative group text-[#bdbcbc] hover:text-[#c87c38]"
+          className="relative group text-[16px] text-[#000000] hover:text-[#c87c38]"
         >
           Contact
           <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-gradient-to-r from-[#C87C38] to-[#a07e7e] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300"></span>

@@ -284,176 +284,176 @@ export default function Gallery() {
   };
 
   // Detail View Component
-  const DetailView = ({ collection }) => {
-    return (
-      <div className="min-h-screen bg-gray-50 p-6 mt-12">
-        {/* Header */}
-        <div className="flex items-center justify-between mb-8">
-          <button className="flex items-center gap-2 text-gray-600 hover:text-gray-800 mt-4" onClick={handleBackToGallery}>
-            <ArrowLeft size={20} />
-            <span className="text-sm font-medium">BACK TO GALLERY</span>
-          </button>
-          <div className="flex items-center gap-4">
-            <button className="p-2 hover:bg-gray-200 rounded-full">
-              <Heart size={20} className="text-gray-600" />
-            </button>
-            <button className="p-2 hover:bg-gray-200 rounded-full">
-              <Share2 size={20} className="text-gray-600" />
-            </button>
-            <button className="p-2 hover:bg-gray-200 rounded-full">
-              <Download size={20} className="text-gray-600" />
-            </button>
-          </div>
-        </div>
+  // const DetailView = ({ collection }) => {
+  //   return (
+  //     <div className="min-h-screen bg-gray-50 p-6 mt-12">
+        
+  //       <div className="flex items-center justify-between mb-8">
+  //         <button className="flex items-center gap-2 text-gray-600 hover:text-gray-800 mt-4" onClick={handleBackToGallery}>
+  //           <ArrowLeft size={20} />
+  //           <span className="text-sm font-medium">BACK TO GALLERY</span>
+  //         </button>
+  //         <div className="flex items-center gap-4">
+  //           <button className="p-2 hover:bg-gray-200 rounded-full">
+  //             <Heart size={20} className="text-gray-600" />
+  //           </button>
+  //           <button className="p-2 hover:bg-gray-200 rounded-full">
+  //             <Share2 size={20} className="text-gray-600" />
+  //           </button>
+  //           <button className="p-2 hover:bg-gray-200 rounded-full">
+  //             <Download size={20} className="text-gray-600" />
+  //           </button>
+  //         </div>
+  //       </div>
 
-        {/* Main Content */}
-        <div className="max-w-7xl mx-auto">
-          {/* Category Tag */}
-          <div className="inline-block mb-4">
-            <span className="text-purple-600 text-sm font-semibold tracking-wide uppercase">
-              {collection.category}
-            </span>
-          </div>
+        
+  //       <div className="max-w-7xl mx-auto">
+        
+  //         <div className="inline-block mb-4">
+  //           <span className="text-purple-600 text-sm font-semibold tracking-wide uppercase">
+  //             {collection.category}
+  //           </span>
+  //         </div>
 
-          {/* Title */}
-          <h1 className="text-5xl lg:text-6xl font-serif font-semibold text-gray-900 leading-tight mb-6">
-            {collection.title}
-          </h1>
-          {/* Description */}
-          <p className="text-gray-600 text-[18px] font-light font-sans leading-relaxed max-w-full mb-8">
-            {collection.description}
-          </p>
+          
+  //         <h1 className="text-5xl lg:text-6xl font-serif font-semibold text-gray-900 leading-tight mb-6">
+  //           {collection.title}
+  //         </h1>
+         
+  //         <p className="text-gray-600 text-[18px] font-light font-sans leading-relaxed max-w-full mb-8">
+  //           {collection.description}
+  //         </p>
 
-          {/* Event Details */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
-            <div className="flex items-center gap-3">
-              <Calendar size={20} className="text-purple-600" />
-              <span className="text-gray-700 text-[14px]">{collection.date}</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Camera size={20} className="text-purple-600" />
-              <span className="text-gray-700 text-[14px] ">{collection.photographer}</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <MapPin size={20} className="text-purple-600" />
-              <span className="text-gray-700 text-[14px]">{collection.location}</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="text-gray-700 text-[14px] font-medium">Client:</span>
-              <span className="text-gray-700 text-[14px]">{collection.client}</span>
-            </div>
-          </div>
-        </div>
+        
+  //         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+  //           <div className="flex items-center gap-3">
+  //             <Calendar size={20} className="text-purple-600" />
+  //             <span className="text-gray-700 text-[14px]">{collection.date}</span>
+  //           </div>
+  //           <div className="flex items-center gap-3">
+  //             <Camera size={20} className="text-purple-600" />
+  //             <span className="text-gray-700 text-[14px] ">{collection.photographer}</span>
+  //           </div>
+  //           <div className="flex items-center gap-3">
+  //             <MapPin size={20} className="text-purple-600" />
+  //             <span className="text-gray-700 text-[14px]">{collection.location}</span>
+  //           </div>
+  //           <div className="flex items-center gap-3">
+  //             <span className="text-gray-700 text-[14px] font-medium">Client:</span>
+  //             <span className="text-gray-700 text-[14px]">{collection.client}</span>
+  //           </div>
+  //         </div>
+  //       </div>
 
-        {/* Image Gallery Section */}
-        <div className="max-w-7xl mx-auto mt-16">
-          <div className="mb-8 flex justify-between items-center">
-            <div>
-              <h2 className="text-3xl font-light text-gray-900 mb-2">Gallery</h2>
-              <p className="text-gray-600">View all images from this collection</p>
-            </div>
-            <button
-              onClick={() => setShowImageUploader(true)}
-              className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium"
-            >
-              Add Images
-            </button>
-          </div>
+       
+  //       <div className="max-w-7xl mx-auto mt-16">
+  //         <div className="mb-8 flex justify-between items-center">
+  //           <div>
+  //             <h2 className="text-3xl font-light text-gray-900 mb-2">Gallery</h2>
+  //             <p className="text-gray-600">View all images from this collection</p>
+  //           </div>
+  //           <button
+  //             onClick={() => setShowImageUploader(true)}
+  //             className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors font-medium"
+  //           >
+  //             Add Images
+  //           </button>
+  //         </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {collection.galleryImages?.map((image, index) => (
-              <div
-                key={index}
-                className="aspect-square bg-gray-200 rounded-lg overflow-hidden hover:opacity-75 transition-opacity cursor-pointer transform hover:scale-105 transition-transform duration-300"
-                onClick={() => {
-                  setSelectedImage(image)
-                  setSelectedImageIndex(index)
-                }}
-              >
-                <img
-                  src={image || "/placeholder.svg?height=300&width=300"}
-                  alt={`${collection.title} - Image ${index + 1}`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
+  //         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+  //           {collection.galleryImages?.map((image, index) => (
+  //             <div
+  //               key={index}
+  //               className="aspect-square bg-gray-200 rounded-lg overflow-hidden hover:opacity-75 transition-opacity cursor-pointer transform hover:scale-105 transition-transform duration-300"
+  //               onClick={() => {
+  //                 setSelectedImage(image)
+  //                 setSelectedImageIndex(index)
+  //               }}
+  //             >
+  //               <img
+  //                 src={image || "/placeholder.svg?height=300&width=300"}
+  //                 alt={`${collection.title} - Image ${index + 1}`}
+  //                 className="w-full h-full object-cover"
+  //               />
+  //             </div>
+  //           ))}
+  //         </div>
 
-          {/* Image Uploader Modal */}
-          {showImageUploader && <ImageUploader />}
-        </div>
+         
+  //         {showImageUploader && <ImageUploader />}
+  //       </div>
 
-        {/* Image Modal/Lightbox */}
-        {selectedImage && (
-          <div
-            className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
-            onClick={() => setSelectedImage(null)}
-          >
-            <div className="relative max-w-4xl max-h-full">
-              <button
-                onClick={() => setSelectedImage(null)}
-                className="absolute top-4 right-4 text-white hover:text-gray-300 z-10 bg-black bg-opacity-50 rounded-full p-2"
-              >
-                <X className="w-6 h-6" />
-              </button>
+        
+  //       {selectedImage && (
+  //         <div
+  //           className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+  //           onClick={() => setSelectedImage(null)}
+  //         >
+  //           <div className="relative max-w-4xl max-h-full">
+  //             <button
+  //               onClick={() => setSelectedImage(null)}
+  //               className="absolute top-4 right-4 text-white hover:text-gray-300 z-10 bg-black bg-opacity-50 rounded-full p-2"
+  //             >
+  //               <X className="w-6 h-6" />
+  //             </button>
 
-              {/* Previous Button */}
-              {selectedImageIndex > 0 && (
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    const newIndex = selectedImageIndex - 1
-                    setSelectedImageIndex(newIndex)
-                    setSelectedImage(collection.galleryImages[newIndex])
-                  }}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 z-10 bg-black bg-opacity-50 rounded-full p-2"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
-              )}
+              
+  //             {selectedImageIndex > 0 && (
+  //               <button
+  //                 onClick={(e) => {
+  //                   e.stopPropagation()
+  //                   const newIndex = selectedImageIndex - 1
+  //                   setSelectedImageIndex(newIndex)
+  //                   setSelectedImage(collection.galleryImages[newIndex])
+  //                 }}
+  //                 className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 z-10 bg-black bg-opacity-50 rounded-full p-2"
+  //               >
+  //                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  //                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+  //                 </svg>
+  //               </button>
+  //             )}
 
-              {/* Next Button */}
-              {selectedImageIndex < collection.galleryImages.length - 1 && (
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    const newIndex = selectedImageIndex + 1
-                    setSelectedImageIndex(newIndex)
-                    setSelectedImage(collection.galleryImages[newIndex])
-                  }}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 z-10 bg-black bg-opacity-50 rounded-full p-2"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              )}
+              
+  //             {selectedImageIndex < collection.galleryImages.length - 1 && (
+  //               <button
+  //                 onClick={(e) => {
+  //                   e.stopPropagation()
+  //                   const newIndex = selectedImageIndex + 1
+  //                   setSelectedImageIndex(newIndex)
+  //                   setSelectedImage(collection.galleryImages[newIndex])
+  //                 }}
+  //                 className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 z-10 bg-black bg-opacity-50 rounded-full p-2"
+  //               >
+  //                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  //                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+  //                 </svg>
+  //               </button>
+  //             )}
 
-              <img
-                src={selectedImage || "/placeholder.svg"}
-                alt="Full size view"
-                className="max-w-full max-h-full object-contain"
-                onClick={(e) => e.stopPropagation()}
-              />
+  //             <img
+  //               src={selectedImage || "/placeholder.svg"}
+  //               alt="Full size view"
+  //               className="max-w-full max-h-full object-contain"
+  //               onClick={(e) => e.stopPropagation()}
+  //             />
 
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm bg-black bg-opacity-50 px-3 py-1 rounded-full">
-                {selectedImageIndex + 1} / {collection.galleryImages.length}
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-    );
-  };
+  //             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm bg-black bg-opacity-50 px-3 py-1 rounded-full">
+  //               {selectedImageIndex + 1} / {collection.galleryImages.length}
+  //             </div>
+  //           </div>
+  //         </div>
+  //       )}
+  //     </div>
+  //   );
+  // };
 
-  // If a collection is selected, show detail view
-  if (selectedCollection) {
-    return <DetailView collection={selectedCollection} />;
-  }
+  
+  // if (selectedCollection) {
+  //   return <DetailView collection={selectedCollection} />;
+  // }
 
-  // Otherwise show gallery view
+  
   return (
     <>
       {/* Gallery-1 */}

@@ -153,7 +153,7 @@ const Footer = () => {
       <div className="border-t border-white/10 w-full">
         <div className="w-full max-w-[1300px] mx-auto px-6 sm:px-10 md:px-16 py-6 flex flex-col sm:flex-row justify-between items-center text-gray-400 text-sm">
           <p>
-            © 2024 Vibgyor Events. Crafted with in India. All rights reserved.
+            © 2025 Vibgyor Events. Crafted with in India. All rights reserved.
           </p>
           <div className="flex gap-6 mt-4 sm:mt-0">
             <a href="#" className="hover:text-white transition">Privacy Policy</a>
